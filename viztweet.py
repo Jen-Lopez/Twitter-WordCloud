@@ -44,6 +44,7 @@ def clean(text):
 
 # SEARCH
 def search(query,API):
+	query = query.lower()
 	search_query = query + " -filter:retweets"
 
 	# COMMON WORDS
@@ -52,7 +53,8 @@ def search(query,API):
 	update_stopwords = ['retweet','rt','https','thing','things','twitter','tweet','tweets','they',
 	'word','will','many','need','make','okay','place','something','said','much','think','know',
 	'open','close','says','nothing','didn','amp','wasn','esta','going','come','wouldn','really','maybe',
-	'sure','even','blah','always','feel','every','video']
+	'sure','even','blah','always','feel','every','video','every','video','want','lmao','hello','knew',
+	'please','today','tomorrow','yesterday','before']
 	update_stopwords.extend(listq)
 	stopwords.update(update_stopwords)
 
@@ -127,7 +129,7 @@ def main():
 				break
 			elif res == 's':
 				# do search query
-				query = ((input('Enter a search query: ')).strip()).lower()
+				query = (input('Enter a search query: ')).strip()
 				search_dict = search(query,api)
 				generate(search_dict)
 				break
