@@ -9,7 +9,7 @@ This project uses the [twitter](https://developer.twitter.com/en/docs/tweets/sea
       - tweepy - used in authentication and retrieving tweet data
       - textblob - word tokenization
       - wordcloud - generates wordcloud using 'word':frequency dictionary
-      - mathplotlib - displays word cloud
+      - matplotlib - displays word cloud
       - pillow Image module - opens image we want to use as mask 
       - numpy - enables use of image mask
 
